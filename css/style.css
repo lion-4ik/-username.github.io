@@ -1,0 +1,733 @@
+@font-face {
+  font-family: "Post No Bills Jaffna";
+  src: url(../fonts/PostNoBillsJaffna-Bold.ttf);
+  font-weight: 700;
+}
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "PT Sans", "Post No Bills Jaffna", "Playfair Display", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  color: #fff;
+  line-height: 1;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+ul li {
+  list-style: none;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+.wrapper {
+  max-width: 1920px;
+  background-color: #000;
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.__container {
+  max-width: 1112px;
+  margin: 0 auto;
+}
+
+.header_contacts {
+  color: #969696;
+  font-size: 12px;
+  padding: 14px 0;
+  font-family: "PT Sans";
+}
+
+.header_contacts {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.header_contacts-info ul li {
+  display: inline-block;
+  padding-right: 16px;
+}
+.header_contacts-info ul > *:not(:first-child) {
+  padding-left: 16px;
+}
+
+.header_contacts-info ul > *:not(:last-child) {
+  border-right: 1px solid #969696;
+}
+.header_contacts-info img {
+  margin-right: 16px;
+}
+
+.header img {
+  vertical-align: middle;
+}
+.header_main {
+  background-color: #0f0f0f;
+}
+.header_main-logo a h2 {
+  font-weight: 700;
+  font-size: 36px;
+  font-family: "Post No Bills Jaffna";
+  color: #fff;
+  margin: 15px 0;
+}
+.header_main-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header_nav {
+  display: flex;
+  align-items: center;
+}
+.header_nav-icons {
+  margin-left: 40px;
+}
+.header_nav-icons ._cart {
+  margin-right: 20px;
+}
+.header_nav ul li {
+  display: inline-block;
+}
+.header_nav ul li a {
+  font-family: "PT Sans";
+  font-weight: 400;
+  color: #969696;
+  text-transform: uppercase;
+  padding: 30px 20px;
+  display: block;
+  transition: all 0.5s;
+}
+
+.header_nav ul li a:hover {
+  background-color: #1f1f1f;
+  color: #fff;
+}
+
+.menu-btn {
+  display: none;
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  top: 5px;
+  right: 0;
+  z-index: 2;
+  overflow: hidden;
+  margin-right: 10px;
+}
+.menu-btn span {
+  width: 30px;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  transition: all 0.5s;
+}
+.menu-btn span:nth-of-type(2) {
+  top: calc(50% - 7px);
+}
+.menu-btn span:nth-of-type(3) {
+  top: calc(50% + 7px);
+}
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  max-height: 250px;
+  background-color: #969696;
+  opacity: 0.6;
+  transform: translateX(100%);
+  transition: transform 0.5s;
+  padding: 30px 60px 10px 10px;
+}
+.menu.active {
+  transform: translateX(0);
+}
+.menu li {
+  list-style-type: none;
+  padding-top: 10px;
+}
+.menu li a {
+  color: #fff;
+  font-weight: 500;
+  font-family: "PT Sans";
+  font-size: 16px;
+  display: inline-block;
+  margin-right: 10px;
+}
+.menu li a:hover {
+  color: #000;
+}
+.menu-btn.active span:nth-of-type(1) {
+  display: none;
+}
+.menu-btn.active span:nth-of-type(2) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(45deg);
+}
+.menu-btn.active span:nth-of-type(3) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(-45deg);
+}
+
+.main {
+  background: url("../images/main/background.jpg") no-repeat center;
+  background-size: cover;
+  padding-top: 160px;
+}
+.main_container {
+  padding-bottom: 154px;
+}
+.main_title {
+  max-width: 326px;
+  margin: 0 auto 80px;
+  padding: 93px 68px;
+  border: 4px solid #fff;
+  text-transform: uppercase;
+}
+.main_title h1 {
+  font-family: "Post No Bills Jaffna";
+  font-size: 64px;
+  border-bottom: 2px solid #fff;
+  margin-bottom: 7px;
+}
+.main_title p {
+  font-family: "PT Sans";
+  font-size: 22px;
+  font-weight: 400;
+}
+.main_text {
+  max-width: 730px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 125%;
+  font-family: "PT Sans";
+}
+
+.collection_new {
+  font-family: "Playfair Display";
+  display: flex;
+  justify-content: space-between;
+}
+.collection_items {
+  padding: 0 0 93px 0;
+}
+.collection_items-after,
+._after {
+  position: relative;
+  max-width: 380px;
+  margin: 0 auto;
+}
+.collection_items h3:after,
+.collection_catalog h3:after {
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid #fff;
+  top: 60px;
+  right: 130px;
+  left: 130px;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-size: 36px;
+  font-weight: 700;
+  font-family: "Playfair Display";
+  margin: 93px 0 60px;
+  text-align: center;
+}
+
+.collection_clocks {
+  display: flex;
+  margin-left: 80px;
+  min-width: 0;
+}
+.collection_clocks-body {
+  margin-right: 50px;
+}
+
+.collection_clocks-body:last-child {
+  margin-right: 80px;
+}
+.collection_clocks-bckgr,
+.clocks_body-bckgr {
+  background-color: #191b1c;
+  padding: 55px 22px;
+  margin-bottom: 25px;
+}
+.collection img {
+  max-width: 100%;
+}
+
+.collection_clocks-body p,
+.clocks_body p {
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.collection_clocks-body p:last-child,
+.clocks_body p:last-child {
+  font-size: 16px;
+}
+
+.collection a {
+  display: block;
+  font-family: "PT Sans";
+  text-transform: uppercase;
+  border: 1px solid #fff;
+  color: #fff;
+  font-weight: 400;
+  font-size: 18px;
+  transition: 0.5s all;
+  padding: 12px 28px;
+  text-align: center;
+  margin: 0 auto;
+}
+.collection a:hover {
+  background-color: grey;
+  opacity: 0.6;
+}
+.collection_catalog {
+  background: url("../images/section_collection/new_collection.jpg") no-repeat
+    center;
+  background-size: cover;
+  flex: 0 1 50%;
+  position: relative;
+}
+.collection_catalog-title {
+  margin-top: 460px;
+}
+.collection_catalog a {
+  max-width: 138px;
+}
+
+.collection_old {
+  display: flex;
+  justify-content: space-between;
+}
+.collection_old-text {
+  margin: 0 auto;
+  max-width: 471px;
+  position: relative;
+}
+.collection_old-text h3 {
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+.collection_old-text h3:after {
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid #fff;
+  top: 160px;
+  right: 180px;
+  left: 180px;
+}
+.collection_old-text p {
+  font-family: "PT Sans";
+  font-weight: 400;
+  line-height: 150%;
+  margin-top: 80px;
+  text-align: center;
+}
+.collection_old-text a {
+  margin-top: 61px;
+}
+
+.collection_old-link {
+  max-width: 311px;
+  margin: 61px auto;
+}
+
+.clocks_items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.clocks_body {
+  margin-right: 19px;
+  margin-bottom: 40px;
+}
+.clocks_after {
+  position: relative;
+  max-width: 450px;
+  margin: 120px auto;
+}
+
+.clocks h3:after {
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid #fff;
+  top: 80px;
+  right: 160px;
+  left: 160px;
+}
+.brands {
+  background-color: #0f0f0f;
+  padding-bottom: 80px;
+}
+.brands_after {
+  position: relative;
+  max-width: 290px;
+  margin: 60px auto 80px;
+}
+.brands h3:after {
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid #fff;
+  top: 80px;
+  right: 80px;
+  left: 80px;
+}
+.brands_icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.brands_icons > *:not(:last-child) {
+}
+
+.footer {
+  background: url("../images/footer/Rectangle.jpg") no-repeat center;
+  background-size: cover;
+}
+.footer_shop {
+  margin-right: 30px;
+}
+.footer_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 100px;
+}
+.footer h4 {
+  font-family: "Playfair Display";
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin: 80px 0 40px;
+}
+.footer p {
+  font-family: "PT Sans";
+  font-weight: 400;
+  line-height: 150%;
+  max-width: 350px;
+}
+.footer_links {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer_category {
+  flex: 1 1 30%;
+}
+.footer_category a {
+  display: block;
+  color: #fff;
+  font-weight: 400;
+  background-color: #000;
+  padding: 10px 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.footer_mail form {
+  margin-top: 37px;
+}
+.footer_input-style {
+  background-color: #c4c4c4;
+  text-indent: 5px;
+  color: #fff;
+  opacity: 0.7;
+  width: 210px;
+  height: 41px;
+}
+input[type="email"]::-webkit-input-placeholder {
+  color: #fff;
+}
+input[type="email"]::-moz-placeholder {
+  color: #fff;
+}
+.footer_mail a {
+  display: inline-block;
+  color: #fff;
+  background-color: #000;
+  text-transform: uppercase;
+  font-weight: 400;
+  padding: 12px 20px;
+  height: 41px;
+}
+.footer a {
+  transition: all 0.5s;
+}
+
+.footer_line {
+  background-color: #000;
+}
+.footer_line-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 17px 0;
+  width: 100vw;
+}
+.footer_line-container p {
+  font-family: "PT Sans";
+  font-size: 12px;
+  font-weight: 400;
+}
+.footer_line-container p::before {
+  content: "©";
+  margin-right: 5px;
+}
+.footer_line-container a {
+  font-family: "PT Sans";
+  font-size: 12px;
+  font-weight: 700;
+  color: #d0d0d0;
+}
+
+/* ------ Адаптация --------*/
+
+@media (max-width: 1600px) {
+  .collection_catalog {
+    flex: 60%;
+  }
+  .collection_catalog a {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .collection_clocks-body {
+    margin-right: 20px;
+  }
+  .collection_catalog {
+    flex: 80%;
+  }
+  .collection_clocks-bckgr {
+    padding: 30px 5px;
+  }
+  .collection_catalog a {
+    margin-bottom: 10px;
+  }
+  .collection_clocks-body:last-child {
+    margin-right: 40px;
+  }
+  .collection_old {
+    flex-wrap: wrap-reverse;
+  }
+
+  .collection_old-text {
+    padding: 5px 15px;
+  }
+  .collection_old-text a {
+    margin-top: 41px;
+  }
+  .collection_old-img {
+    margin: 20px auto;
+  }
+  .footer_container {
+    padding: 10px 20px 40px;
+  }
+  .footer_line-container {
+    padding: 12px 5px;
+  }
+}
+@media (max-width: 1130px) {
+  .header_contacts {
+    padding: 14px 5px;
+  }
+  .header_main {
+    padding: 0 5px;
+  }
+}
+@media (max-width: 1024px) {
+  .collection_new {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .collection_clocks {
+    margin-left: 50px;
+  }
+  .collection_items {
+    padding-bottom: 10px;
+  }
+  .collection_catalog {
+    flex: 0 1 100%;
+  }
+}
+@media (max-width: 768px) {
+  .collection_catalog-title {
+    margin-top: 360px;
+  }
+  .header_nav {
+    display: none;
+  }
+  .menu-btn {
+    display: block;
+  }
+  .header_contacts-registration {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .main_text {
+    padding: 10px;
+  }
+  .clocks_after {
+    margin: 20px auto;
+  }
+  .clocks h3:after {
+    top: 50px;
+  }
+  .clocks_body-bckgr {
+    padding: 0;
+  }
+  .clocks_body,
+  .clocks_body-bckgr img {
+    max-width: 100px;
+  }
+  .clocks_body {
+    margin-right: 10px;
+  }
+  .collection_clocks-body p,
+  .collection_clocks-body p:last-child,
+  .clocks p,
+  .clocks_body p:last-child {
+    font-size: 12px;
+  }
+  .clocks_items {
+    padding-left: 5px;
+  }
+}
+@media (max-width: 480px) {
+  h3 {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  .collection_items h3:after,
+  .collection_catalog h3:after {
+    top: 35px;
+  }
+  .collection_catalog {
+    background: url("../images/section_collection/mobile_new_collection.jpg")
+      no-repeat center;
+    background-size: cover;
+  }
+  .collection_catalog-title {
+    margin-top: 200px;
+  }
+  .collection_old-text h3:after {
+    top: 65px;
+    right: 160px;
+    left: 160px;
+  }
+
+  .collection_old-text p {
+    margin-top: 20px;
+  }
+  .main_title {
+    padding: 50px 68px;
+  }
+  .header_contacts-info ul li {
+    padding-right: 5px;
+    margin-bottom: 5px;
+  }
+  .header_contacts-info ul > *:not(:first-child) {
+    padding-left: 5px;
+  }
+  .header_contacts-info img {
+    margin-right: 5px;
+  }
+  .header_contacts-info {
+    margin-right: 50px;
+  }
+
+  .brands {
+    padding-bottom: 30px;
+  }
+  .brands_after {
+    margin: 30px auto;
+  }
+  .brands h3:after {
+    top: 40px;
+  }
+  .brands_icons {
+    justify-content: center;
+  }
+  .footer h4 {
+    margin: 20px;
+  }
+  .footer_container {
+    justify-content: start;
+  }
+}
+@media (max-width: 367px) {
+  .clocks h3:after {
+    top: 70px;
+    right: 120px;
+    left: 120px;
+  }
+}
+@media (max-width: 320px) {
+  h1 {
+    font-size: 36px;
+  }
+  .main_title {
+    padding: 10px;
+    text-align: center;
+  }
+  .main_title p {
+    font-size: 16px;
+  }
+  .main_container {
+    padding-bottom: 50px;
+  }
+  .collection_clocks-bckgr {
+    padding: 5px;
+  }
+  .collection_clocks-body p {
+    margin-bottom: 5px;
+  }
+  .collection_clocks-bckgr,
+  .clocks_body-bckgr {
+    margin-bottom: 5px;
+  }
+  .clocks_body {
+    margin-bottom: 10px;
+  }
+  .brands {
+    padding-bottom: 20px;
+  }
+}
